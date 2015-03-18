@@ -1,0 +1,54 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/house_header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/house_header_size"
+            android:scaleType="centerCrop"
+            android:src="@drawable/house_header"/>
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/bar_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/house_header_layout"
+        android:layout_marginTop="@dimen/header_bar_offset">
+
+        <RelativeLayout
+            android:id="@+id/house_header_bar_content"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/header_bar"
+            android:background="@android:color/white"
+            android:layout_marginTop="30dp">
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/house_icon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_home_black_48dp"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitCenter"
+            android:background="@drawable/round_back"/>
+
+    </RelativeLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/parallax_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"/>
+
+</RelativeLayout>
